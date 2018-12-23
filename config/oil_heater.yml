@@ -1,0 +1,6 @@
+oil_heater:
+  temperature_settings:
+    offset_toggles: 1
+    degrees_on_above_nest: 4
+    highest_degree: 95
+    lowest_degree: 42

@@ -1,0 +1,5 @@
+offset_toggles,1
+degrees_on_above_nest,4
+highest_degree,95
+lowest_degree,42
+forced_time_on,"{""start""=>7, ""stop""=>9}"

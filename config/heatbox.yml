@@ -1,0 +1,9 @@
+heatbox:
+  temperature_settings:
+    offset_toggles: 10
+    degrees_on_above_nest: 2
+    highest_degree: 90
+    lowest_degree: 39
+    forced_time_on:
+      start: 7
+      stop: 9
