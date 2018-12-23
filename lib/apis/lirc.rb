@@ -19,8 +19,6 @@ module APIs
         send_once(meth.to_s.sub('click_', ''))
         sleep(options[:delay])
       end
-    rescue
-      binding.pry
     end
   end
 end
