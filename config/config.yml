@@ -1,0 +1,32 @@
+devices:
+  heatbox:
+    keys:
+      power: KEY_POWER 
+      toggle_low_high: KEY_1 
+      raise_temperature: KEY_2 
+      toggle_oscillation: KEY_3 
+      set_timer: KEY_4 
+      lower_temperature: KEY_5 
+    temperature_settings:
+      offset_toggles: 10
+      degrees_on_above_nest: 2
+      highest_degree: 90
+      lowest_degree: 39
+      forced_time_on:
+        start: 7
+        stop: 9
+  oil_heater:
+    keys:
+      power: KEY_POWER
+      raise_temperature: KEY_2
+      lower_temperature: KEY_3
+    temperature_settings:
+      offset_toggles: 1
+      degrees_on_above_nest: 4
+      highest_degree: 95
+      lowest_degree: 42
+   
+api:
+  open_weather:
+    options:
+      :units: imperial
