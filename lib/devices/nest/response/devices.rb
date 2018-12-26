@@ -9,7 +9,9 @@ module Devices
         end
 
         def body
-          response[response.keys.first]
+          Cachy.cache(:nest_devices, expires_in: 5.minutes) do
+            response[response.keys.first]
+          end
         end
 
         def temperature_difference

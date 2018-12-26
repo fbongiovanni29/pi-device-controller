@@ -64,7 +64,7 @@ module Devices
     end
 
     def nest
-      @nest ||= Devices::Nest::Request.new('devices').response
+      Devices::Nest::Request.new('devices').response
     end
   end
 end

@@ -25,6 +25,32 @@ devices:
       degrees_on_above_nest: 4
       highest_degree: 95
       lowest_degree: 42
+  magic_mirror:
+    keys:
+      enter: KEY_ENTER
+      power: KEY_POWER
+      right: KEY_RIGHT
+      left: KEY_LEFT
+      up: KEY_UP
+      down: KEY_DOWN
+      back: KEY_BACK
+      setup: KEY_SETUP
+    cec_controls:
+      power_on: 'on 0'
+      power_off: 'standby 0'
+    brightness_levels:
+      -
+        after: 1000
+        level: 30
+      -
+        after: 1400
+        level: 45
+      -
+        after: 1500
+        level: 60
+      -
+        after: 2300
+        level: 20
    
 api:
   open_weather:
