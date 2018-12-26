@@ -12,7 +12,7 @@ module Devices
 
     def control!
       @nest = nil
-      power(active_temperature_range? || forced_time_on?)
+      power((active_temperature_range? || forced_time_on?) && !too_hot?)
     end
 
     def calibrate!
@@ -46,6 +46,10 @@ module Devices
       )
     end
 
+    def too_hot?
+      nest.current_temperature > temperature_settings['too_hot']
+    end
+
     def target_temperature_gap
       nest.target_temperature + temperature_settings['degrees_on_above_nest'] +
         temperature_settings['offset_toggles'] - temperature_settings['lowest_degree']
@@ -64,7 +68,7 @@ module Devices
     end
 
     def nest
-      Devices::Nest::Request.new('devices').response
+      @nest ||= Devices::Nest::Request.new('devices').response
     end
   end
 end

@@ -4,9 +4,9 @@ module Mirror
     device = Devices::Mirror.new
  
     loop do
-      device.power(Home.present?)
-      sleep 10
-      device.set_brightness(brightness_level) if Home.present?
+      device.power(Home.present? && !Home.bedtime?)
+      sleep 10.seconds
+      device.set_brightness(brightness_level) if Home.present? && !Home.bedtime?
     end
   end
   

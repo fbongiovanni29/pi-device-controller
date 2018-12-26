@@ -1,7 +1,6 @@
 module Home
   class << self
   def present?
-    return true
     APIs::ARP.phone_connected? || chromecast.playing? || nest.home?
   end
 

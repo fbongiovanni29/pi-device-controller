@@ -10,13 +10,4 @@ Cachy.cache_store = client
 
 binding.pry if ARGV.last == 'debug'
 
-log = false
-
-if log
-  LOGR = Logger.new('./log/heater_log.json')
-  LOGR.level = Logger::INFO
-
-  LOGR.formatter = Ruby::JSONFormatter::Base.new
-end
-
 ARGV.first.camelize.constantize.control!

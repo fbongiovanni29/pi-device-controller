@@ -12,6 +12,7 @@ devices:
       degrees_on_above_nest: 2
       highest_degree: 90
       lowest_degree: 39
+      too_hot: 74
       forced_time_on:
         start: 7
         stop: 9
@@ -21,6 +22,7 @@ devices:
       raise_temperature: KEY_2
       lower_temperature: KEY_3
     temperature_settings:
+      too_hot: 74
       offset_toggles: 1
       degrees_on_above_nest: 4
       highest_degree: 95
